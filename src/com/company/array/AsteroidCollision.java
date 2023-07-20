@@ -34,24 +34,33 @@ public class AsteroidCollision {
                 .toArray();
     }
 
-    /*public int[] asteroidCollision2(int[] asteroids) {
+    public int[] asteroidCollision2(int[] asteroids) {
         Stack<Integer>stack=new Stack<>();
         for(int item:asteroids){
-            if(item>0 || stack.peek()<0){
+            if(item>0 || stack.isEmpty() || stack.peek()<0){
                 stack.push(item);
             }else{
                 while (!stack.isEmpty()) {
                     if(stack.peek()>0 && item<0) {
                         if (Math.abs(stack.peek()) < Math.abs(item)) {
                             stack.pop();
-                            stack.push(item);
+                            if(item>0){
+                                stack.push(item);
+                                break;
+                            }else{
+                                if(stack.isEmpty()){
+                                    stack.push(item);
+                                    break;
+                                }
+                            }
                         } else if (Math.abs(stack.peek()) == Math.abs(item)) {
                             stack.pop();
                             break;
-                        } else {
+                        }else{
                             break;
                         }
                     }else{
+                        stack.push(item);
                         break;
                     }
                 }
@@ -62,5 +71,5 @@ public class AsteroidCollision {
             result[i]=stack.pop();
         }
         return result;
-    }*/
+    }
 }
