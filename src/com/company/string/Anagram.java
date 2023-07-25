@@ -2,7 +2,7 @@ package com.company.string;
 
 import java.util.Arrays;
 
-public class anagram {
+public class Anagram {
     public boolean isAnagram(String s, String t) {
         if(s.length()!=t.length())
             return false;
