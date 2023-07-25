@@ -1,6 +1,6 @@
 package com.company.array;
 
-public class removeDuplicateSorted2 {
+public class RemoveDuplicateSorted2 {
     public int removeDuplicates(int[] nums) {
         int len=nums.length;
         int dup=0;
