@@ -1,5 +1,7 @@
 package com.company.array;
 
+import java.util.Arrays;
+
 public class Candy {
     public int candy(int[] ratings) {
         int curAmount=1;
@@ -28,5 +30,23 @@ public class Candy {
             amount[i]=curAmount;
         }
         return totalAmount;
+    }
+
+    public int candy2(int[] ratings) {
+        int [] amount=new int[ratings.length];
+        Arrays.fill(amount,1);
+        for(int i=1;i<amount.length;i++){
+            if(ratings[i]>ratings[i-1]){
+                amount[i]=amount[i-1]+1;
+            }
+        }
+        int sum=amount[ratings.length-1];
+        for(int i=ratings.length-2;i>=0;i--){
+            if(ratings[i]>ratings[i+1]){
+                amount[i]=Math.max(amount[i],amount[i+1]+1);
+            }
+            sum+=amount[i];
+        }
+        return sum;
     }
 }
