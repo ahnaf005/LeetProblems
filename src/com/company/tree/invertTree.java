@@ -1,0 +1,13 @@
+package com.company.tree;
+
+public class invertTree {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null) return null;
+        if(root.left!=null) invertTree(root.left);
+        if(root.right!=null) invertTree(root.right);
+        TreeNode tmp = root.left;
+        root.left = root.right;
+        root.right = tmp;
+        return root;
+    }
+}
