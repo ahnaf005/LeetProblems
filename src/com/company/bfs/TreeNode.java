@@ -1,4 +1,4 @@
-package com.company.bst;
+package com.company.bfs;
 
 public class TreeNode {
     int val;

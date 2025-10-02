@@ -1,4 +1,4 @@
-package com.company.bst;
+package com.company.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
