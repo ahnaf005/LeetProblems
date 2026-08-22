@@ -23,15 +23,15 @@ public class buildTreePostOrder {
 
         // build left and right subtree
         // excluding inorderIndexMap[rootValue] element because it's the root
-        root.left = arrayToTree(
-                postorder,
-                left,
-                inOrderIndexMap.get(rootValue) - 1
-        );
         root.right = arrayToTree(
                 postorder,
                 inOrderIndexMap.get(rootValue) + 1,
                 right
+        );
+        root.left = arrayToTree(
+                postorder,
+                left,
+                inOrderIndexMap.get(rootValue) - 1
         );
         return root;
     }
