@@ -14,6 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        String a = new String("hello");
+        String b = "hello";
+        System.out.println(a == b);
         int []x = new int []{-3, -2, 0, 1, 4};
         System.out.println(oddOrPos(x));
         System.out.println("repo created");
