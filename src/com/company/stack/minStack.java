@@ -1,11 +1,12 @@
 package com.company.stack;
 
+import java.util.ArrayDeque;
 import java.util.Stack;
 
 class MinStack {
-    Stack<int[]> stack;
+    ArrayDeque<int[]> stack;
     public MinStack() {
-        stack = new Stack<>();
+        stack = new ArrayDeque<>();
     }
 
     public void push(int val) {
